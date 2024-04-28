@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font1);
+}
+
+body{
+    background-color: black;
+}
+
+:root {
+  --font1: "Poppins", sans-serif;
+  --font2: "Questrial", sans-serif;
+}
+.main {
+  background-image: url(assets/images/bg.jpg);
+  background-position: center center;
+  background-size: max(100vw, 1000px);
+  height: 70vh;
+}
+.main .box {
+  height: 70vh;
+  width: 100%;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  background-color: black;
+  box-shadow: 10px 10px 125px rgba(50, 50, 93, 0.25) inset;
+}
+nav {
+  max-width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+
+  align-items: center;
+  height: 62px;
+}
+nav img {
+  position: relative;
+  z-index: 10;
+  width: 114px;
+}
+
+.btn button {
+  position: relative;
+  z-index: 10;
+}
+.hero {
+  height:calc(100% - 62px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  z-index: 10;
+  gap: 25px;
+  padding:23px;
+  text-align: center;
+}
+
+.hero .special {
+  font-family: var(--font2);
+  font-weight: 700;
+  font-size: 42px;
+}
+
+.hero span {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn button:nth-child(2),
+.btns button {
+  padding-block: 10px;
+  padding-inline: 15px;
+  border-radius: 7px;
+  color: white;
+  background-color: red;
+  font-weight: 700;
+}
+
+.transparent {
+  background-color: transparent;
+  padding-block: 10px;
+  padding-inline: 20px;
+  color: white;
+  border: 0.5px solid rgba(189, 188, 188,.5);
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+input::placeholder{color: rgba(255, 255, 255,0.5);
+font-size: 14px;}
+
+.btns > .transparent{
+padding-right: 50px;
+padding-block:13px;
+border-radius: 5px;
+}
+
+.separate{
+    height:4px;
+    background-color: grey;
+    width: 100vw;
+}
+
+:is(.btn,.btns) button{
+
+    transition: all 500ms ease-in-out;
+}
+
+:is(.btn,.btns) button:hover{
+
+color: red;
+background-color: white;
+
+}
+
+
+/* Hero section ends */
