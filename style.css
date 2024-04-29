@@ -7,8 +7,9 @@
   font-family: var(--font1);
 }
 
-body{
-    background-color: black;
+body {
+  background-color: black;
+  overflow-x: hidden;
 }
 
 :root {
@@ -38,19 +39,24 @@ nav {
 
   align-items: center;
   height: 62px;
+  translate: 0px 20px;
+  position: relative;
+  z-index: 10000;
 }
 nav img {
   position: relative;
   z-index: 10;
-  width: 114px;
+  width: 200px;
+ 
 }
 
 .btn button {
   position: relative;
   z-index: 10;
+  margin-inline:10px;
 }
 .hero {
-  height:calc(100% - 62px);
+  height: calc(100% - 62px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +65,7 @@ nav img {
   position: relative;
   z-index: 10;
   gap: 25px;
-  padding:23px;
+  padding: 23px;
   text-align: center;
 }
 
@@ -82,7 +88,8 @@ nav img {
 }
 
 .btn button:nth-child(2),
-.btns button {
+.btns button,
+.btn2 {
   padding-block: 10px;
   padding-inline: 15px;
   border-radius: 7px;
@@ -96,37 +103,138 @@ nav img {
   padding-block: 10px;
   padding-inline: 20px;
   color: white;
-  border: 0.5px solid rgba(189, 188, 188,.5);
+  border: 0.5px solid rgba(189, 188, 188, 0.5);
   font-weight: 700;
   border-radius: 5px;
 }
 
-input::placeholder{color: rgba(255, 255, 255,0.5);
-font-size: 14px;}
-
-.btns > .transparent{
-padding-right: 50px;
-padding-block:13px;
-border-radius: 5px;
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
 }
 
-.separate{
-    height:4px;
-    background-color: grey;
-    width: 100vw;
+.btns > .transparent {
+  padding-right: 50px;
+  padding-block: 13px;
+  border-radius: 5px;
 }
 
-:is(.btn,.btns) button{
-
-    transition: all 500ms ease-in-out;
+.separate {
+  height: 4px;
+  background-color: rgba(128, 128, 128, 0.5);
+  width: 100vw;
 }
 
-:is(.btn,.btns) button:hover{
-
-color: red;
-background-color: white;
-
+:is(.btn, .btns) button {
+  transition: all 500ms ease-in;
 }
 
+:is(.btn, .btns) button:hover {
+  color: red;
+  background-color: white;
+}
 
 /* Hero section ends */
+.sec1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: white;
+  max-width: 70vw;
+  gap: 10vw;
+}
+
+.sec1 .secimg {
+  width: 30vw;
+  position: relative;
+  z-index: 100;
+}
+
+.secimg > img {
+  position: relative;
+  z-index: 100;
+}
+.secimg > video {
+  position: absolute;
+  top: 98px;
+  left: 72px;
+}
+
+.headers h1 {
+  font-size: 46px;
+  margin-bottom: 10px;
+}
+
+.sec3 .secimg {
+  position: relative;
+}
+
+.sec3 .secimg > video {
+  position: absolute;
+  top: 50px;
+  left: 102px;
+  width: max(19vw, 420px);
+}
+
+/* sections end */
+
+.FAQhead {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+  color: white;
+  margin-top: 75px;
+}
+
+.accordion {
+  width: max(92vw, 500px);
+  margin-inline: auto;
+  padding: 5vh;
+}
+details {
+  background-color: #1e1e1e;
+  margin-bottom: 10px;
+  filter: drop-shadow(5px 5px 0px #0a0a0a);
+}
+details:hover {
+  filter: drop-shadow(5px 5px 4px #0a0a0a);
+}
+details > summary {
+  color: white;
+  padding: 50px 10px;
+  font-size: 36px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+details > summary:hover {
+  background-color: rgb(45, 45, 45);
+  border: 2px solid white;
+}
+details > p {
+  padding: 20px;
+  color: #ddd;
+  font-size: 36px;
+  line-height: 60px;
+  word-spacing: 10px;
+}
+
+/* FAQEND */
+
+.signup {
+  width: max(90vw, 500px);
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 60px;
+  color: white;
+
+  font-size: 36px;
+  margin-inline: auto;
+ 
+}
+
